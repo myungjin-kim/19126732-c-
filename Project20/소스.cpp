@@ -3,14 +3,30 @@
 
 int main() 
 {
-	double a, b, c;
-	double d, e, f;
-	printf("섭씨온도를 소수로 3개 입력하시오: \n");
-	scanf("%lf %lf %lf", &a, &b, &c);
-	d = (9.0 / 5.0) * a + 32.0;
-	e = (9.0 / 5.0) * b + 32.0;
-	f = (9.0 / 5.0) * c + 32.0;
-	printf("%.4f\n", d);
-	printf("%.4f\n", e);
-	printf("%.4f\n", f);
+	double a, b;
+	int c;
+	
+	printf("두 실수 입력: ");
+	scanf("%lf %lf", &a, &b);
+
+	printf("연산 종류 번호선택 1(+), 2(-), 3(*), 4(/): ");
+	scanf("%d", &c);
+
+	if (c == 1)
+	{
+		printf("%f + %f = %f", a, b, a + b);
+	}
+	if (c == 2)
+	{
+		printf("%f - %f = %f", a, b, a - b);
+	}
+	if (c == 3)
+	{
+		printf("%f * %f = %f", a, b, a * b);
+	}
+	if (c == 4)
+	{
+		printf("%f / %f = %f", a, b, a / b);
+	}
+
 }
